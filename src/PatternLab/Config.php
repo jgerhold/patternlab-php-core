@@ -189,6 +189,8 @@ class Config {
 		self::$options["patternExportDir"] = self::$options["exportDir"]."/patterns";
 		self::$options["patternPublicDir"] = self::$options["publicDir"]."/patterns";
 		self::$options["patternSourceDir"] = self::$options["sourceDir"]."/_patterns";
+		self::$options["plHome"]           = isset(self::$options["plHome"]) ? self::$options["plHome"] : "";
+
 		
 		// make sure styleguideExcludes is set to an array even if it's empty
 		if (is_string(self::$options["styleGuideExcludes"])) {
@@ -208,6 +210,7 @@ class Config {
 		self::setExposedOption("ishMaximum");
 		self::setExposedOption("ishMinimum");
 		self::setExposedOption("patternExtension");
+		self::setExposedOption("plHome");
 		
 	}
 	
